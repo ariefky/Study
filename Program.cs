@@ -4,31 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LatihanClassdanObject
+namespace Polymorphism
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //Membuat objek dari class Mahasiswa
-            Mahasiswa saya = new Mahasiswa();
-            Mahasiswa kamu = new Mahasiswa();
+            Animal animal = new Animal();
+            animal.Speak();
 
-            //Mengeset nilai properties objek saya dan kamu
-            saya.Nim = "131415";
-            saya.Nama = "Paijo";
-            saya.Ipk = 3.95f;
+            Cat cat = new Cat();
+            cat.Speak();
+            //animal.Speak();
 
-            kamu.Nim = "121314";
-            kamu.Nama = "Bemo";
-            kamu.Ipk = 4f;
+            Chicken chicken = new Chicken();
+            chicken.Speak();
+            //animal.Speak();
 
-            //Memanggil method registrasi dan isi krs
-            saya.Registrasi();
-            saya.IsiKrs();
-
-            kamu.Registrasi();
-            kamu.IsiKrs();
+            Dog dog = new Dog();
+            dog.Speak();
+             //animal.Speak();
 
             Console.ReadKey();
         }
